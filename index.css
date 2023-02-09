@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(24,24,24,0.95);
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#clockFace {
+  width: 25vw;
+  height: calc(25vw);
+  border-radius: 50%;
+  clip-path: circle(50% at 50% 50%);
+  background: radial-gradient(#333, #000);
+  box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.19), 0px 6px 6px rgba(255, 255, 255, 0.23);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock-numbers {
+  color: #fff;
+  font-size: 1rem;
+  z-index: 9999;
+}
+
+.clock-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 38%;
+  position: absolute;
+  z-index: 1;
+} 
+
+.twelve-six {
+  transform: rotate(90deg);
+}
+
+.twelve-six > span {
+  transform: rotate(-90deg);
+}
+
+.one-seven {
+  transform: rotate(120deg);
+}
+
+.one-seven > span {
+  transform: rotate(-120deg);
+}
+
+.two-eight {
+  transform: rotate(150deg);
+}
+
+.two-eight > span {
+  transform: rotate(-150deg);
+}
+
+.three-nine {
+  transform: rotate(180deg);
+}
+
+.three-nine > span {
+  transform: rotate(-180deg);
+}
+
+.four-ten {
+  transform: rotate(210deg);
+}
+
+.four-ten > span {
+  transform: rotate(-210deg);
+}
+
+.five-eleven {
+  transform: rotate(240deg);
+}
+
+.five-eleven > span {
+  transform: rotate(-240deg);
+}
+
+.hand-section {
+  height: 1%;
+  display: flex;
+  z-index: -1;
+}
+
+.blank {
+  width: 50%;
+  height: 100%;
+}
+
+.hand {
+  width: 50%;
+  height: 100%;
+}
+
+#hour {
+  padding: 0 41%;
+  transform: rotate(270deg);
+  z-index: 1;
+}
+
+.hour-hand {
+  background-color: rgb(50, 232, 50);
+}
+
+#minute {
+  padding: 0 40%;
+  transform: rotate(270deg);
+  z-index: 2;
+}
+
+.minute-hand {
+  background-color: rgb(50, 50, 232);
+  height: 75%;
+
+}
+
+#second {
+  padding: 0 39%;
+  transform: rotate(270deg);
+  z-index: 3;
+}
+
+.second-hand {
+  background-color: rgb(232, 50, 50);
+  height: 50%;
+}
+
+.inner-circle {
+  z-index: 4;
+  width: 1.5vw;
+  height: 1.5vw;
+  background-color: #222;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.selected-hour {
+  background-color: rgb(236, 23, 58);
+  clip-path: circle(50% at 50% 50%);
+  width: 2vw;
+  height: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+@media (max-width: 750px) {
+  .clock-numbers {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .clock-numbers {
+    font-size: 0.7rem;
+  }
+}
