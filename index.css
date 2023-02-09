@@ -17,7 +17,7 @@ body {
 
 #clockFace {
   width: 25vw;
-  height: calc(25vw);
+  height: 25vw;
   border-radius: 50%;
   clip-path: circle(50% at 50% 50%);
   background: radial-gradient(#333, #000);
@@ -30,7 +30,6 @@ body {
 .clock-numbers {
   color: #fff;
   font-size: 1rem;
-  z-index: 9999;
 }
 
 .clock-section {
@@ -38,7 +37,7 @@ body {
   height: auto;
   display: flex;
   justify-content: space-between;
-  padding: 0 38%;
+  padding: 0 39%;
   position: absolute;
   z-index: 1;
 } 
@@ -108,7 +107,7 @@ body {
 }
 
 #hour {
-  padding: 0 41%;
+  padding: 0 42%;
   transform: rotate(270deg);
   z-index: 1;
 }
@@ -118,7 +117,7 @@ body {
 }
 
 #minute {
-  padding: 0 40%;
+  padding: 0 41%;
   transform: rotate(270deg);
   z-index: 2;
 }
@@ -130,7 +129,7 @@ body {
 }
 
 #second {
-  padding: 0 39%;
+  padding: 0 40%;
   transform: rotate(270deg);
   z-index: 3;
 }
@@ -160,7 +159,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
 }
 
 @media (max-width: 750px) {
