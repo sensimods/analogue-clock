@@ -23,7 +23,7 @@ const time = () => {
   moveHands()
   clockNumbers.forEach(num => {
     (+num.dataset.num === hours || +num.dataset.num === (hours - 12)) ? num.classList.add('selected-hour') : num.classList.remove('selected-hour') 
-    return (hours.toString().length > 1) ? num.innerText = +num.dataset.num + 12 : num.innerText = num.dataset.num     
+    return (hours>12) ? num.innerText = +num.dataset.num + 12 : num.innerText = num.dataset.num     
   })
 }
 
